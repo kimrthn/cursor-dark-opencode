@@ -1,28 +1,25 @@
-# Cursor Theme for VS Code
+# Cursor Dark for OpenCode
 
-A faithful copy of the [Cursor](https://cursor.sh) AI editor theme, now available as a standalone Visual Studio Code theme extension.
+The Cursor editor dark theme (from the [cursor-dark](https://github.com/CedricVerlinden/cursor-dark) VS Code pack), ported to the OpenCode TUI.
 
-> This extension is not affiliated with or endorsed by Cursor. All credit for the original theme design goes to the Cursor team.
+Two variants:
 
-## ✨ Features
+- `cursor-dark` — background `#1a1a1a`
+- `cursor-less-dark` — background `#242424`
 
--   Identical look and feel to the default Cursor editor theme
--   Minimal, clean design with a focus on readability
--   Ideal for developers who like Cursor's aesthetic but prefer to stay in regular VS Code
+## Install
 
-## 🛠️ Installation
+```sh
+mkdir -p ~/.config/opencode/themes
+cp cursor-dark.json cursor-less-dark.json ~/.config/opencode/themes/
+```
 
-1. Open the **Extensions** panel in VS Code
-2. Search for **Cursor Dark**
-3. Click **Install**
-4. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`)
-5. Choose `Preferences: Color Theme` and select **Cursor Dark**
+Restart OpenCode and run `/themes` to pick `cursor-dark` or `cursor-less-dark`, or set it in `~/.config/opencode/cli.json`:
 
-## 📌 Notes
+```json
+{ "$schema": "https://opencode.ai/v2/cli.json", "theme": { "name": "cursor-dark", "mode": "dark" } }
+```
 
--   This theme is a direct copy of the one used in [Cursor](https://www.cursor.com).
--   Intended for users who want the same visual experience without switching to Cursor itself.
+## Credits
 
-## 📄 License
-
-This theme is provided as-is under the [MIT License](LICENSE). All visual design credit goes to the creators of Cursor.
+Ported from [CedricVerlinden/cursor-dark](https://github.com/CedricVerlinden/cursor-dark) (MIT), which repackages the Cursor editor theme. MIT license.
